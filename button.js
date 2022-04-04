@@ -72,3 +72,63 @@ navToggle5.addEventListener("click", function () {
     this.setAttribute("aria-expanded", "true");
   }
 });
+
+let navToggle6 = document.querySelector(".nav__toggle6");
+let navWrapper6 = document.querySelector("#Foc");
+
+navToggle6.addEventListener("click", function () {
+  if (navWrapper6.classList.contains("active")) {
+    this.setAttribute("aria-expanded", "false");
+    this.setAttribute("aria-label", "menu");
+    navWrapper6.classList.remove("active");
+  } else {
+    navWrapper6.classList.add("active");
+    this.setAttribute("aria-label", "close menu");
+    this.setAttribute("aria-expanded", "true");
+  }
+});
+
+let navToggle7 = document.querySelector(".nav__toggle7");
+let navWrapper7 = document.querySelector("#Fcm");
+
+navToggle7.addEventListener("click", function () {
+  if (navWrapper7.classList.contains("active")) {
+    this.setAttribute("aria-expanded", "false");
+    this.setAttribute("aria-label", "menu");
+    navWrapper7.classList.remove("active");
+  } else {
+    navWrapper7.classList.add("active");
+    this.setAttribute("aria-label", "close menu");
+    this.setAttribute("aria-expanded", "true");
+  }
+});
+
+let navToggle8 = document.querySelector(".nav__toggle8");
+let navWrapper8 = document.querySelector("#Stats");
+
+navToggle8.addEventListener("click", function () {
+  if (navWrapper8.classList.contains("active")) {
+    this.setAttribute("aria-expanded", "false");
+    this.setAttribute("aria-label", "menu");
+    navWrapper8.classList.remove("active");
+  } else {
+    navWrapper8.classList.add("active");
+    this.setAttribute("aria-label", "close menu");
+    this.setAttribute("aria-expanded", "true");
+  }
+});
+
+let navToggle9 = document.querySelector(".nav__toggle9");
+let navWrapper9 = document.querySelector("#Mmw");
+
+navToggle9.addEventListener("click", function () {
+  if (navWrapper9.classList.contains("active")) {
+    this.setAttribute("aria-expanded", "false");
+    this.setAttribute("aria-label", "menu");
+    navWrapper9.classList.remove("active");
+  } else {
+    navWrapper9.classList.add("active");
+    this.setAttribute("aria-label", "close menu");
+    this.setAttribute("aria-expanded", "true");
+  }
+});

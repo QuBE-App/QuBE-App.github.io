@@ -170,6 +170,57 @@ function draw(position) {
     if(shape === "TIC"){
         drawImage11(position);
     }
+    if(shape === "foc1"){
+        drawImage12(position);
+    }
+    if(shape === "foc2"){
+        drawImage13(position);
+    }
+    if(shape === "foc3"){
+        drawImage14(position);
+    }
+    if(shape === "foc4"){
+        drawImage15(position);
+    }
+    if(shape === "fcm1"){
+        drawImage16(position);
+    }
+    if(shape === "fcm2"){
+        drawImage17(position);
+    }
+    if(shape === "fcm3"){
+        drawImage18(position);
+    }
+    if(shape === "s1"){
+        drawImage19(position);
+    }
+    if(shape === "s2"){
+        drawImage20(position);
+    }
+    if(shape === "s3"){
+        drawImage21(position);
+    }
+    if(shape === "s4"){
+        drawImage22(position);
+    }
+    if(shape === "s5"){
+        drawImage23(position);
+    }
+    if(shape === "m1"){
+        drawImage24(position);
+    }
+    if(shape === "m2"){
+        drawImage25(position);
+    }
+    if(shape === "m3"){
+        drawImage26(position);
+    }
+    if(shape === "m4"){
+        drawImage27(position);
+    }
+    if(shape === "m5"){
+        drawImage28(position);
+    }
     /*if(fillBox.checked) {
         context.fill();
     } else {
@@ -374,3 +425,137 @@ function drawImage11(position) {
     eraserStroke = true;
 }
 
+function drawImage12(position) {
+    var imgElement = document.getElementById("foc1");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage13(position) {
+    var imgElement = document.getElementById("foc2");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage14(position) {
+    var imgElement = document.getElementById("foc3");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage15(position) {
+    var imgElement = document.getElementById("foc4");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage16(position) {
+    var imgElement = document.getElementById("fcm1");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage17(position) {
+    var imgElement = document.getElementById("fcm2");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage18(position) {
+    var imgElement = document.getElementById("fcm3");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage19(position) {
+    var imgElement = document.getElementById("s1");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage20(position) {
+    var imgElement = document.getElementById("s2");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage21(position) {
+    var imgElement = document.getElementById("s3");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage22(position) {
+    var imgElement = document.getElementById("s4");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+function drawImage23(position) {
+    var imgElement = document.getElementById("s5");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage24(position) {
+    var imgElement = document.getElementById("m1");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage25(position) {
+    var imgElement = document.getElementById("m2");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage26(position) {
+    var imgElement = document.getElementById("m3");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage27(position) {
+    var imgElement = document.getElementById("m4");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+function drawImage28(position) {
+    var imgElement = document.getElementById("m5");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}

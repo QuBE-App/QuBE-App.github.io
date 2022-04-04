@@ -257,7 +257,16 @@ img {
     font-size: 20px;
     width: 200px;
     margin-left: 0;
-    margin-bottom: 10px;
+  }
+  .nav__toggle9 {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 200px;
+    margin-left: 0;
   }
       *,
       *:before,
@@ -386,5 +395,61 @@ img {
   visibility: hidden;
 }
 #formulaCalcu.active {
+  visibility: visible;
+}
+
+#Foc {
+  position: absolute;
+  top: 39%;
+  left: 85%;
+  padding: 20px;
+  background-color: #19806e;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px teal;
+  visibility: hidden;
+}
+#Foc.active {
+  visibility: visible;
+}
+
+#Fcm {
+  position: absolute;
+  top: 39%;
+  left: 85%;
+  padding: 20px;
+  background-color: #19806e;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px teal;
+  visibility: hidden;
+}
+#Fcm.active {
+  visibility: visible;
+}
+
+#Stats {
+  position: absolute;
+  top: 39%;
+  left: 85%;
+  padding: 20px;
+  background-color: #19806e;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px teal;
+  visibility: hidden;
+}
+#Stats.active {
+  visibility: visible;
+}
+
+#Mmw {
+  position: absolute;
+  top: 39%;
+  left: 85%;
+  padding: 20px;
+  background-color: #19806e;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px teal;
+  visibility: hidden;
+}
+#Mmw.active {
   visibility: visible;
 }
