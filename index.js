@@ -327,6 +327,9 @@ function init() {
     canvas.addEventListener('mousedown', dragStart, false);
     canvas.addEventListener('mousemove', drag, false);
     canvas.addEventListener('mouseup', dragStop, false);
+    canvas.addEventListener('touchstart', dragStart, false);
+    canvas.addEventListener('touchmove', drag, false);
+    canvas.addEventListener('touchend', dragStop, false);
     lineWidth.addEventListener("input", changeLineWidth, false);
     fillColor.addEventListener("input", changeFillStyle, false);
     strokeColor.addEventListener("input", changeStrokeStyle, false);
@@ -335,6 +338,9 @@ function init() {
     canvas.addEventListener('mousedown', startPosition);
     canvas.addEventListener('mouseup', finishedPosition);
     canvas.addEventListener('mousemove', drawFree);
+    canvas.addEventListener('touchstart',startPosition);
+    canvas.addEventListener('touchmove', drawFree);
+    canvas.addEventListener('touchend', finishedPosition);
 }
 
 window.addEventListener('load', init, false);

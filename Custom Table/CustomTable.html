@@ -16,6 +16,7 @@
         }
         body{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9e9e9;
         }
         button{
             margin: auto;
@@ -49,6 +50,12 @@
         .tools {
             justify-content: center;
             margin-top: 25px;
+            margin-left: 33%;
+        }
+        .tools1 {
+            justify-content: center;
+            margin-top: 25px;
+            margin-left: 39%;
         }
         .tools .color-field {
             height: 40px;
@@ -77,37 +84,83 @@
             padding: 10px 10px;
 
         }
+        .container {
+            width: 98%;
+            margin: auto;
+        }
+        #navbar {
+            background-color: #e9e9e9;
+            color: white;
+        }
 
+        #navbar ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        #navbar li {
+            display: inline;
+        }
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding-right: 15px;
+        }
+        #navbar a:hover {
+            color: teal;
+        }
+        #img-home {
+            width: 50px;
+            height: 50px;
+        }
+        #img-home:hover {
+            box-shadow: 0 0 2px 2px;
+            border-radius: 50px;
+        }
+        #design-box {
+            border: solid 2px #000;
+            padding-left: 10px;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+
+        
     </style>
     
     <title>Truth Table</title>
     </head>
     <body>
-       <p><big> Custom Table </big><i>(Maximum of 12 rows and 12 colums)</i>&nbsp;&nbsp;&nbsp;
+            <nav id="navbar">
+                <div class="container">
+                    <ul>
+                        <li><a href="../index.html"><img id="img-home" src="../img/home.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </nav>
+        <div id="design-box">
+        <p><big> Custom Table </big><i>(Maximum of 12 rows and 12 columns)</i>&nbsp;&nbsp;&nbsp;
         <label><input type="number" id="row" placeholder="Rows" min="1" max="12"></input> &nbsp;</label>
-        <label><input type="number" id="col" placeholder="Column" min="1" max="100"></input> &nbsp;&nbsp;</label>
+        <label><input type="number" id="col" placeholder="Columns" min="1" max="100"></input> &nbsp;&nbsp;</label>
        
         <button type="button" onclick="table()"> Create </button>
-        <button type="button"><a href="../index.html">Home</a></button>
-        <span style="padding-left:500px">
-        Download
-        <ion-icon name="download-outline" id="download4"></ion-icon></span>
+        <button name="download-outline" id="download4">Download</span></button>
         </p>
-        <hr>
+        </div>
        <span id="t"></span>
        <canvas id="canvas"></canvas>
+       <div class="tools1">
        <label for="uploader">Select File</label>
        <input type="file" id="uploader">
+        </div>
        <div class="tools">
             <button onClick="undo_last()" type="button" class="button">Undo</button>
             <button onClick="clear_canvas()" type="button" class="button">Clear</button>
-
-            <div onClick="change_color(this)" class="color-field" style="background: black;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: rgb(242, 253, 253); border: 1px solid #222; border-radius: 3px;"></div>
-
             <input onInput="draw_color = this.value" type="color" class="color-picker">
+            <div onClick="change_color(this)" class="color-field" style="background: rgb(242, 253, 253); border: 1px solid #222; border-radius: 3px;">
+            <span>Erase</span></div>
+
+            
             <input onInput="draw_width = this.value" type="range" min="1" max="10" value="2" class="pen-range">
        </div>
 

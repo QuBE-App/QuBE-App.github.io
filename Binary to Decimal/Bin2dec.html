@@ -8,6 +8,7 @@
     <style type="text/css">
         body{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9e9e9;
         }
         table{
             margin-left: 20px;
@@ -82,6 +83,7 @@
         .tools {
             justify-content: center;
             margin-top: 25px;
+            margin-left: 20%;
         }
         .tools .color-field {
             height: 40px;
@@ -103,19 +105,70 @@
             color: white;
             background: teal;
         }
-        a {
+        .tools1 {
+            justify-content: center;
+            margin-top: 25px;
+            margin-left: 39%;
+        }
+        .container {
+            width: 98%;
+            margin: auto;
+        }
+        #navbar {
+            background-color: #e9e9e9;
+            color: white;
+        }
+
+        #navbar ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        #navbar li {
+            display: inline;
+        }
+        #navbar a {
             text-decoration: none;
             color: white;
-            cursor: pointer;
-            padding: 7px 20px;
+            font-size: 18px;
+            padding-right: 15px;
+        }
+        #navbar a:hover {
+            color: teal;
+        }
+        #img-home {
+            width: 50px;
+            height: 50px;
+        }
+        #img-home:hover {
+            box-shadow: 0 0 2px 2px;
+            border-radius: 50px;
+        }
+        #download1{
+            margin: auto;
+            border: 1px solid rgb(0, 23, 114);
+            background : teal;
+            width: 100px;
+            height: 30px;
             text-align: center;
+            color:#fff;
             border-radius: 5px;
+            cursor: pointer;
             box-shadow: 0 0 10px rgb(0,0,0,0.1);
             -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
             -webkit-transition-property: box-shadow, transform;
             transition-property: box-shadow, transform;
+
         }
+        #design-box {
+            border: solid 2px #000;
+            padding-left: 10px;
+            padding-bottom: 1%;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+
 
 
     </style>
@@ -123,39 +176,47 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="../index.html"><img id="img-home" src="../img/home.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="design-box">
     <div id="main">
         <p><big>Binary to Decimal (Table Discussion)</big>&nbsp;
             
             <ion-icon name="help-circle-outline" onclick="help1()"></ion-icon>
-            <span style="padding-left:1050px">
-            Download <ion-icon name="download-outline" id="download1"></ion-icon>
             <div id="container"><img class="b2d" src="Bin2Dec.jpg" alt=""></div></p>
         
         <label>Binary number: </label>
         <input id="binary" type="text" maxlength="8" placeholder="Insert">&nbsp;
         <button onclick="tablebin(binary)" class="tbb">Create Table</button>&nbsp;
+        <button name="download-outline" id="download1">Download</button>
         <button onClick="binaryToDecimalConverter(binary)" type="button" class="btn-revealans">Reveal</button>
+        
+    </div>
     </div>
 
         <hr>
         
         <div id="result"> </div>
         <canvas id="canvas"></canvas>
+        <div class="tools1">
        <label for="uploader">Select File</label>
        <input type="file" id="uploader">
+        </div>
        <div class="tools">
             <button onClick="undo_last()" type="button" class="button">Undo</button>
             <button onClick="clear_canvas()" type="button" class="button">Clear</button>
-            <button class="button"><a href="../index.html">Home</a></button>
             <button id="hidebtn" type="button" class="button">Hide</button>
             <button id="unhidebtn" type="button" class="button">Unhide</button>
-
-            <div onClick="change_color(this)" class="color-field" style="background: black;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
-            <div onClick="change_color(this)" class="color-field" style="background: rgb(242, 253, 253); border: 1px solid #222; border-radius: 3px;"></div>
-
             <input onInput="draw_color = this.value" type="color" class="color-picker">
+            <div onClick="change_color(this)" class="color-field" style="background: rgb(242, 253, 253); border: 1px solid #222; border-radius: 3px;">
+            <span>Erase</span></div>
+
+            
             <input onInput="draw_width = this.value" type="range" min="1" max="10" value="2" class="pen-range">
        </div>
 
