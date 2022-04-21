@@ -120,11 +120,12 @@
             margin-left: 36%;
         }
         .tools .color-field {
-            height: 40px;
-            width: 40px;
-            min-width: 40px;
-            min-height: 40px;
+            height: 26px;
+            width: 39px;
+            min-width: 30px;
+            min-height: 30px;
             cursor: pointer;
+            padding-top: 5px;
             display: inline-block;
             box-sizing: border-box;
             border-radius: 50%;
@@ -186,21 +187,31 @@
             border-radius: 15px;
             background-color: #fff;
         }
+        #download3 {
+            width: 50px;
+            height: 50px;
+        }
+		#download3:hover {
+            box-shadow: 0 0 2px 2px;
+			color: teal;
+			cursor: pointer;
+        }
     </style>
 
     <title>Table Generator</title>
 </head>
 
 <body>
+    <div id="hidd">
     <nav id="navbar">
         <div class="container">
             <ul>
                 <li><a href="../index.html"><img id="img-home" src="../img/home.png" alt=""></a></li>
+                <li><img name="download-outline" id="download3" src="../img/download.png" alt=""></li>
             </ul>
         </div>
     </nav>
     <div id="ctr"><img class="tt" src="Truth-Table.jpg" alt=""></div>
-    <div id="hidd">
     <table class="whole-table">
         <tr>
             <td>
@@ -252,7 +263,6 @@
 
         <p>4. Use table head for field names (Statments & Logical Stataments).</p>
         <button onclick="create()" type="button"> Create </button>
-        <button name="download-outline" id="download3">Download</span></button>
     </td>
     </td> 
     </tr>

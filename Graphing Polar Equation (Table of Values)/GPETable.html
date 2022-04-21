@@ -71,15 +71,16 @@
         }
         .tools {
             justify-content: center;
-            margin-top: 25px;
-            margin-left: 33%;
+            margin-top: 5px;
+            margin-left: 25%;
         }
         .tools .color-field {
-            height: 40px;
-            width: 40px;
-            min-width: 40px;
-            min-height: 40px;
+            height: 26px;
+            width: 39px;
+            min-width: 30px;
+            min-height: 30px;
             cursor: pointer;
+            padding-top: 5px;
             display: inline-block;
             box-sizing: border-box;
             border-radius: 50%;
@@ -146,13 +147,39 @@
             margin-top: 5px;
             margin-left: 39%;
         }
+        #download3 {
+            width: 50px;
+            height: 50px;
+        }
+		#download3:hover {
+            box-shadow: 0 0 2px 2px;
+			color: teal;
+			cursor: pointer;
+        }
+        .h1{
+            position:absolute;
+            display: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+        .h1:hover {
+            box-shadow: 0 0 2px 2px;
+            color: teal;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <div id="hidd">
     <nav id="navbar">
         <div class="container">
             <ul>
                 <li><a href="../index.html"><img id="img-home" src="../img/home.png" alt=""></a></li>
+                <li><img name="download-outline" id="dd30" class="h1" src="../img/download.png" alt=""></li>
+                <li><img name="download-outline" id="dd24" class="h1" src="../img/download.png" alt=""></li>
+                <li><img name="download-outline" id="dr30" class="h1" src="../img/download.png" alt=""></li>
+                <li><img name="download-outline" id="dr24" class="h1" src="../img/download.png" alt=""></li>
             </ul>
         </div>
     </nav>
@@ -167,16 +194,6 @@
             <img src="D24.png" alt="" class="hi1" id="d24">
             <img src="R30.png" alt="" class="hi" id="r30">
             <img src="R24.png" alt="" class="hi1" id="r24">
-            
-
-
-        <div id="btnss">
-        Download
-        <ion-icon name="download-outline" id="dd30" class="d-o"></ion-icon>
-        <ion-icon name="download-outline" id="dd24" class="d-o"></ion-icon>
-        <ion-icon name="download-outline" id="dr30" class="d-o"></ion-icon>
-        <ion-icon name="download-outline" id="dr24" class="d-o"></ion-icon>
-        </div>
     
 
     <div class="button-comp" id="btn-comp">
@@ -187,6 +204,7 @@
     </div>
     <p id="choose">Choose from 24°/30° interval and degree/radian form</p>
     </div>
+    </div>
     <canvas id="canvas"></canvas>
     <div class="tools1">
        <label for="uploader">Select File</label>
@@ -195,8 +213,10 @@
        <div class="tools">
             <button onClick="undo_last()" type="button" class="button">Undo</button>
             <button onClick="clear_canvas()" type="button" class="button">Clear</button>
+            <button id="hidebtn" type="button" class="button">Hide</button>
+            <button id="unhidebtn" type="button" class="button">Unhide</button>
             <input onInput="draw_color = this.value" type="color" class="color-picker">
-            <div onClick="change_color(this)" class="color-field" style="background: white; border: 1px solid #222; border-radius: 3px;"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: white; border: 1px solid #222; border-radius: 3px;"><span>Erase</span></div>
 
             
             <input onInput="draw_width = this.value" type="range" min="1" max="10" value="2" class="pen-range">
@@ -205,6 +225,24 @@
     
 
     <script>
+        document.getElementById("hidebtn").onclick = function(){
+                document.getElementById("hidd").style.display = "none";
+                }
+                document.getElementById("unhidebtn").onclick = function(){
+                document.getElementById("hidd").style.display = "inline";
+                }
+                var b=1;
+        document.getElementById("hidd").style.display="inline";
+        function hide(){
+            b+=1;
+            if (b==0){
+                document.getElementById("hidd").style.display="none";
+                return b=0;
+            } else {
+                document.getElementById("hidd").style.display="inline";
+                return b=1;
+            }
+        }
         const canvas = document.getElementById('canvas');
            const ctx = canvas.getContext('2d');
 
