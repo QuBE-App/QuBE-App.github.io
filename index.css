@@ -466,3 +466,31 @@ img {
   border-radius: 50px;
   color: teal;
 }
+
+button, input[type="radio"],input[type="button"], #fillBox{
+  cursor: pointer;
+}
+
+input[type="range"] {
+  cursor: move; 
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+input[type="range"]:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#fillColor, #strokeColor{
+  cursor: crosshair;
+}
+
+button:hover {
+  background-color: #185a4f;
+}
+button[aria-expanded="true"] {
+  background-color: #185a4f;
+}

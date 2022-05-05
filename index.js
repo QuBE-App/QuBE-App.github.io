@@ -223,6 +223,9 @@ function draw(position) {
     if(shape === "m5"){
         drawImage28(position);
     }
+    if(shape === "pc"){
+        drawImage29(position);
+    }
     /*if(fillBox.checked) {
         context.fill();
     } else {
@@ -567,3 +570,24 @@ function drawImage28(position) {
     context.drawImage(imgElement, position.x - 250, position.y - 235);
     eraserStroke = true;
 }
+function drawImage29(position) {
+    var imgElement = document.getElementById("try12");
+    //context.fillStyle = context.createPattern(imgElement, "no-repeat");
+    //context.fillRect(0, 0, 300, 385);
+    context.drawImage(imgElement, position.x - 250, position.y - 235);
+    eraserStroke = true;
+}
+
+
+document.addEventListener("keydown", e=> {
+    e.preventDefault();
+    if (e.key.toLowerCase() ==="z" && e.key.toUpperCase() ==="Z" && e.ctrlKey) {
+        undoSnapshot();
+    }
+    if (e.key.toLowerCase() ==="s" && e.key.toUpperCase() ==="S" && e.ctrlKey) {
+        save();
+     }
+     if (e.key.toLowerCase() ==="q" && e.key.toUpperCase() ==="Q" && e.ctrlKey) {
+        eraseCanvas();
+     }
+})
