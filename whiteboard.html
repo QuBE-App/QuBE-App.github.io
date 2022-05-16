@@ -17,9 +17,56 @@
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="img/QLogo192.png">
     <link rel="icon" href="favicon.ico">
+    <style>
+      #navbar {
+            background-color: #3d3d3d;
+            color: white;
+        }
+
+        #navbar ul {
+            padding: 6px;
+            list-style: none;
+        }
+
+        #navbar li {
+            display: inline;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5px;
+            padding: 1px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding-right: 2px;
+            margin: 10px;
+        }
+        #active1 {
+            color: teal;
+        }
+        #navbar li:hover {
+            background-color: rgb(75, 75, 75);
+            border-radius: 6px;
+            padding: 5px;
+        }
+    </style>
     
 </head>
 <body>
+  <nav id="navbar">
+    <div class="container">
+        <ul>
+            <a href="./index.html"><li>Home</li></a>
+            <a href="whiteboard.html"><li id="active1">Whiteboard</li></a>
+            <a href="./Custom Table/CustomTable.html"><li>Custom Tables</li></a>
+            <a href="./Truth Table/tablegnrtr.html"><li>Truth Table Generator</li></a>
+            <a href="./Binary to Decimal/Bin2dec.html"><li>Binary2Decimal</li></a>
+            <a href="./Graphing Polar Equation (Table of Values)/GPETable.html"><li>Graphing Polar Equation</li></a>
+            <a href="./Calendar/MyFirstSchedule.html"><li>Task Management</li></a>
+        </ul>
+    </div>
+</nav>
     <header class="site-header">
         <div class="wrapper site-header__wrapper">
           <nav class="nav">
@@ -30,7 +77,7 @@
               Calculator
             </button>
           </nav>
-          <a href="index.html"><img id="img-home" src="img/home.png" alt=""></a>
+          <!--<a href="index.html"><img id="img-home" src="img/home.png" alt=""></a>-->
             <button class="nav__toggle2" aria-expanded="false" type="button">
               Formulas
             </button>
