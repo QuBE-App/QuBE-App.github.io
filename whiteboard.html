@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuBE: Quality Board for Educators</title>
+    <title>QuBE Whitheboard</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 
@@ -18,38 +18,73 @@
     <link rel="apple-touch-icon" href="img/QLogo192.png">
     <link rel="icon" href="favicon.ico">
     <style>
-      #navbar {
+        #navbar {
             background-color: #3d3d3d;
             color: white;
         }
-
         #navbar ul {
-            padding: 6px;
             list-style: none;
+            position: relative;
         }
 
         #navbar li {
-            display: inline;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            display: inline;
             margin: 5px;
-            padding: 1px;
+            padding: 10px;
         }
 
         #navbar a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
-            padding-right: 2px;
-            margin: 10px;
+            padding-right: 10px; 
         }
         #active1 {
-            color: teal;
+          background-color: rgb(75, 75, 75);
+          border-radius: 6px;
+          color: rgb(134, 218, 218);
         }
         #navbar li:hover {
             background-color: rgb(75, 75, 75);
             border-radius: 6px;
-            padding: 5px;
+            color: rgb(134, 218, 218);
         }
+        .container {
+            width: 70%;
+            margin: auto;
+            overflow: hidden;
+            padding: 12px;
+        }
+
+        .navimg2 {
+          margin: -5px;
+          width: 25px;
+          height: 25px;
+          margin-right: 15px;
+           
+          }
+          .navimg2:hover, .navimg2:focus, .navimg2:active{
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+          input[type="range"] {
+            cursor: move; 
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+            }
+
+            input[type="range"]:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+            }
+
+            input[type="color"]{
+            cursor: crosshair;
+            }
     </style>
     
 </head>
@@ -57,7 +92,7 @@
   <nav id="navbar">
     <div class="container">
         <ul>
-            <a href="./index.html"><li>Home</li></a>
+            <a href="./index.html"><img class="navimg2" src="img/QLogo192.png" alt="" title="Home"></a>
             <a href="whiteboard.html"><li id="active1">Whiteboard</li></a>
             <a href="./Custom Table/CustomTable.html"><li>Custom Tables</li></a>
             <a href="./Truth Table/tablegnrtr.html"><li>Truth Table Generator</li></a>
@@ -83,7 +118,9 @@
             </button>
         </div>
       </header>
-    <canvas id="canvas" width="1300" height="600"></canvas>
+      <div id="haha">
+         <canvas id="canvas" height="600" width="1300"></canvas>
+      </div>
     <!--<img id="try1" src="try2.png">-->
       
     <div id="controls">
@@ -118,9 +155,9 @@
         <p><label>Polygon Sides <input id="polygonSides" type="range" step="1" min="3" max="10"></label></p>
         <p><label>Polygon Angle <input id="polygonAngle" type="range" step="22.5" min="0" max="90"></label></p>
 
-        <p><input id="undo" type="button" value="Undo" title="ctrl+z"></p>
-        <p><input id="clearCanvas" type="button" value="Clear Canvas" title="ctrl+q"></p>
-        <p><input id="save" type="button" value="Save Canvas" title="ctrl+s"></p>
+        <p><input id="undo" type="button" value="Undo" title="Ctrl + Z"></p>
+        <p><input id="clearCanvas" type="button" value="Clear Canvas" title="Ctrl + Q"></p>
+        <p><input id="save" type="button" value="Save Canvas" title="Ctrl + S"></p>
         
         
         

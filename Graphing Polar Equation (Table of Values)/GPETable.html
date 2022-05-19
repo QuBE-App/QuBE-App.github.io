@@ -7,10 +7,15 @@
     <title>Graphing Polar Equation (Table)</title>
 
     <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body{
             font-family:Arial, Helvetica, sans-serif;
             background: url("../img/qubeBG.jpg") no-repeat fixed center;
             background-color: #e9e9e9;
+            background-size: 100% 100%;
         }
         ion-icon{
             cursor: pointer;
@@ -18,7 +23,7 @@
             color:rgb(60, 95, 24);
         }
         .button-comp{
-            width:98.5%;
+            width:97%;
             height: 100px;
             background: rgb(131, 204, 204);
             box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -73,7 +78,7 @@
         .tools {
             justify-content: center;
             margin-top: 5px;
-            margin-left: 25%;
+            margin-left: 30%;
         }
         .tools .color-field {
             min-width: 20px;
@@ -107,44 +112,11 @@
             cursor: pointer;
             color: white;
             background: teal;
-            margin: 5px;
-            padding: 1px;
+            margin: 0;
+            padding: 0;
             border-radius: 5px;
         }
-        a {
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-            padding: 10px 10px;
-        }
-        .container {
-            width: 98%;
-            margin: auto;
-        }
-        .container img {
-            top: 150px;
-        }
-        #navbar {
-            color: white;
-        }
-
-        #navbar ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        #navbar li {
-            display: inline;
-        }
-        #navbar a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            padding-right: 15px;
-        }
-        #navbar a:hover {
-            color: teal;
-        }
+ 
         #img-home {
             width: 50px;
             height: 50px;
@@ -154,10 +126,13 @@
             border-radius: 50px;
         }
         #design-box {
+            font-family: Arial, Helvetica, sans-serif;
             border: solid 2px #000;
-            padding-left: 10px;
             border-radius: 15px;
             background-color: #fff;
+            padding: 20px;
+            text-decoration: none;
+            margin-top: 10px;
         }
         .tools1 {
             justify-content: center;
@@ -167,6 +142,8 @@
         #download3 {
             width: 50px;
             height: 50px;
+            float: right;
+            margin-top: -40px;
 
         }
 		#download3:hover {
@@ -186,77 +163,111 @@
             color: teal;
             cursor: pointer;
         }
-        #navbar1 {
+        #navbar {
             background-color: #3d3d3d;
             color: white;
-            margin-top: -1.5%;
-            margin-left: -1.5%;
-            margin-right: -1.5%;
         }
-        #navbar1 ul {
-            padding: 12px;
+        #navbar ul {
             list-style: none;
+            position: relative;
         }
 
-        #navbar1 li {
+        #navbar li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
             display: inline;
             margin: 5px;
-            padding: 1px;
+            padding: 10px;
         }
 
-        #navbar1 a {
+        #navbar a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
-            padding-right: 2px;
-            margin: 15px;
+            padding-right: 10px; 
         }
         #active1 {
-            color: teal;
+          background-color: rgb(75, 75, 75);
+          border-radius: 6px;
+          color: rgb(134, 218, 218);
         }
-        #navbar1 li:hover {
+        #navbar li:hover {
             background-color: rgb(75, 75, 75);
             border-radius: 6px;
-            padding: 5px;
+            color: rgb(134, 218, 218);
         }
+        .container {
+            width: 70%;
+            margin: auto;
+            overflow: hidden;
+            padding: 12px;
+        }
+        .brsmall {
+            display: block;
+            margin-bottom: .4em;
+        }
+        .navimg2 {
+          margin: -5px;
+          width: 25px;
+          height: 25px;
+          margin-right: 15px;
+          }
+          .navimg2:hover, .navimg2:focus, .navimg2:active{
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+          input[type="range"] {
+            cursor: move; 
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+            }
+
+            input[type="range"]:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+            }
+
+            input[type="color"]{
+            cursor: crosshair;
+            }
+
     </style>
 </head>
 <body>
-    <nav id="navbar1">
-        <div class="container1">
-            <ul>
-                <a href="../index.html"><li>Home</li></a>
-                <a href="../whiteboard.html"><li>Whiteboard</li></a>
-                <a href="../Custom Table/CustomTable.html"><li>Custom Tables</li></a>
-                <a href="../Truth Table/tablegnrtr.html"><li>Truth Table Generator</li></a>
-                <a href="../Binary to Decimal/Bin2dec.html"><li>Binary2Decimal</li></a>
-                <a href="../Graphing Polar Equation (Table of Values)/GPETable.html"><li id="active1">Graphing Polar Equation</li></a>
-                <a href="../Calendar/MyFirstSchedule.html"><li>Task Management</li></a>
-            </ul>
-        </div>
-    </nav>
-    <div id="hidd">
     <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li><img name="download-outline" id="dd30" class="h1" src="../img/download.png" alt=""></li>
-                <li><img name="download-outline" id="dd24" class="h1" src="../img/download.png" alt=""></li>
-                <li><img name="download-outline" id="dr30" class="h1" src="../img/download.png" alt=""></li>
-                <li><img name="download-outline" id="dr24" class="h1" src="../img/download.png" alt=""></li>
-            </ul>
-        </div>
-    </nav>
+      <div class="container">
+        <ul>
+            <a href="../index.html"><img class="navimg2" src="../img/QLogo192.png" alt="" title="Home"></a>
+            <a href="../whiteboard.html"><li>Whiteboard</li></a>
+            <a href="../Custom Table/CustomTable.html"><li>Custom Tables</li></a>
+            <a href="../Truth Table/tablegnrtr.html"><li>Truth Table Generator</li></a>
+            <a href="../Binary to Decimal/Bin2dec.html"><li>Binary2Decimal</li></a>
+            <a href="../Graphing Polar Equation (Table of Values)/GPETable.html"><li id="active1">Graphing Polar Equation</li></a>
+            <a href="../Calendar/MyFirstSchedule.html"><li>Task Management</li></a>
+        </ul>
+      </div>
+  </nav>
+    <div id="hidd">
     <div id="design-box">
     <p><big>Graphing Polar Equation (Table of Values)</big>
         &nbsp;
         <ion-icon class="icn" name="chevron-down-circle-outline" onclick="menu1()"></ion-icon>
+        <div id="download3">
+        <img name="download-outline" id="dd30" class="h1" src="../img/download.png" alt="">
+        <img name="download-outline" id="dd24" class="h1" src="../img/download.png" alt="">
+        <img name="download-outline" id="dr30" class="h1" src="../img/download.png" alt="">
+        <img name="download-outline" id="dr24" class="h1" src="../img/download.png" alt="">
+        </div>
+        <br>
         <hr>
+        <br>
     </p>
-
-            <img src="D30.png" alt="" class="hi" id="d30">
-            <img src="D24.png" alt="" class="hi1" id="d24">
-            <img src="R30.png" alt="" class="hi" id="r30">
-            <img src="R24.png" alt="" class="hi1" id="r24">
+            <img src="D30.jpg" alt="" class="hi" id="d30">
+            <img src="D24.jpg" alt="" class="hi1" id="d24">
+            <img src="R30.jpg" alt="" class="hi" id="r30">
+            <img src="R24.jpg" alt="" class="hi1" id="r24">
     
 
     <div class="button-comp" id="btn-comp">
@@ -274,8 +285,8 @@
        <input type="file" id="uploader">
     </div>
        <div class="tools">
-            <button onClick="undo_last()" type="button" class="button">Undo</button>
-            <button onClick="clear_canvas()" type="button" class="button">Clear</button>
+            <button onClick="undo_last()" type="button" class="button" title="Ctrl + Z">Undo</button>
+            <button onClick="clear_canvas()" type="button" class="button" title="Ctrl + Q">Clear</button>
             <button id="hidebtn" type="button" class="button">Hide</button>
             <button id="unhidebtn" type="button" class="button">Unhide</button>
             <div class="pencil"><img src="../img/pen.png" alt="" onClick="draw_color = 'black'" type="color" class="color-picker" title="Pen"><input onInput="draw_color = this.value" type="color" class="color-picker" title="Color Picker"></div>
@@ -288,6 +299,7 @@
     
 
     <script>
+
         document.getElementById("hidebtn").onclick = function(){
                 document.getElementById("hidd").style.display = "none";
                 }
@@ -517,6 +529,14 @@
               anchor.remove();
           });
         };
+        document.addEventListener("keydown", e=> {
+                if (e.key.toLowerCase() ==="z" && e.key.toUpperCase() ==="Z" && e.ctrlKey) {
+                    undo_last();
+                }
+                if (e.key.toLowerCase() ==="q" && e.key.toUpperCase() ==="Q" && e.ctrlKey) {
+                    clear_canvas();
+                }
+            })
     </script>
     <script src="html2canvas.min.js"></script>
 
